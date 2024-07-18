@@ -1,0 +1,12 @@
+The system shall check if Recipes exist and display any recipes saved
+
+The system system shall display all available ingredients
+
+The System shall prompt the user to select at least one ingredient for a recipe
+
+The system shall offer the ability to save recipes in a Json format
+
+The system shall offer the ability to save recipes in a txt format
+
+The system shall prompt the user to exit with any key
+

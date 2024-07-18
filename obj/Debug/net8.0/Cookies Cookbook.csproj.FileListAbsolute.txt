@@ -1,0 +1,14 @@
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\bin\Debug\net8.0\Cookies Cookbook.exe
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\bin\Debug\net8.0\Cookies Cookbook.deps.json
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\bin\Debug\net8.0\Cookies Cookbook.runtimeconfig.json
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\bin\Debug\net8.0\Cookies Cookbook.dll
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\bin\Debug\net8.0\Cookies Cookbook.pdb
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.AssemblyInfoInputs.cache
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.AssemblyInfo.cs
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.csproj.CoreCompileInputs.cache
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.dll
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\refint\Cookies Cookbook.dll
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.pdb
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.genruntimeconfig.cache
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\ref\Cookies Cookbook.dll
