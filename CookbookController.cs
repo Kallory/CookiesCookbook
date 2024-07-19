@@ -12,10 +12,11 @@ namespace Cookbook {
         internal void Initialize() {
             _cookbookView.Greet();
             // _cookbookModel.CheckForExistingSavedRecipes();
-
-            if (_cookbookModel.IsExistingSavedRecipe("recipes.txt")) {
-                _cookbookModel.LoadSavedRecipes();
-                _cookbookView.PrintSavedRecipes();
+            string path = "recipes.txt";
+            if (_cookbookModel.IsExistingSavedRecipe(path)) {
+                Recipes recipes = _cookbookModel.LoadSavedRecipes(path);
+                _cookbookView.PrintSavedRecipes(recipes);
+                _cookbookView.NewRecipeDisplay();
             } else _cookbookView.NewRecipeDisplay();
 
             _cookbookView.ExitTextDisplay();

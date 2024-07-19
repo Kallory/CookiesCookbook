@@ -14,8 +14,9 @@ namespace Cookbook {
             Console.WriteLine("ready for new recipes to be added");
         }
 
-        internal void PrintSavedRecipes() {
+        internal void PrintSavedRecipes(Recipes recipes) {
             Console.WriteLine("Displaying saved recipes");
+            foreach (var recipe in recipes.All) { Console.WriteLine(recipe); }
         }
     }
 }

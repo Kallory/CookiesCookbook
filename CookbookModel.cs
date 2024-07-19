@@ -1,10 +1,14 @@
 ﻿
+using System.IO;
+
 namespace Cookbook {
     internal class CookbookModel {
         private StringsTextualRepository stringsTextualRepository;
+        private Recipes recipes;
 
         public CookbookModel() {
             this.stringsTextualRepository = new StringsTextualRepository();
+            this.recipes = new Recipes();
         }
 
         internal void CheckForExistingSavedRecipes() {
@@ -14,14 +18,17 @@ namespace Cookbook {
 
         internal bool IsExistingSavedRecipe(string path) {
             if (File.Exists(path)) {
-                stringsTextualRepository.Read(path);
+
                 return true;
             }
             return false;
         }
 
-        internal void LoadSavedRecipes() {
+        public Recipes LoadSavedRecipes(string path) {
             Console.WriteLine("loading recipes");
+            var stringsFromFile = stringsTextualRepository.Read(path);
+            recipes.AddRecipes(stringsFromFile);
+            return recipes;
         }
     }
 }
