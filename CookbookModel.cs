@@ -19,5 +19,9 @@ namespace Cookbook {
             }
             return false;
         }
+
+        internal void LoadSavedRecipes() {
+            Console.WriteLine("loading recipes");
+        }
     }
 }

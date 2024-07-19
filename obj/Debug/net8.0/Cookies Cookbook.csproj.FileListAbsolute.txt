@@ -12,3 +12,4 @@ C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug
 C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.pdb
 C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.genruntimeconfig.cache
 C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\ref\Cookies Cookbook.dll
+C:\Users\kory2\source\repos\CsharpMasterClassProjects\Cookies Cookbook\obj\Debug\net8.0\Cookies Cookbook.sourcelink.json

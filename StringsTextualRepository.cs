@@ -13,3 +13,13 @@
             string.Join(Separator, names));
     }
 }
+
+/*
+ *             How to write to file
+ *             
+ *             
+ *             StringsTextualRepository stringsTextualRepository = new StringsTextualRepository();
+            List<string> names = new List<string>();
+            names.Add("Parker");
+            stringsTextualRepository.Write("names.txt", names);
+*/

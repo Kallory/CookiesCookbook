@@ -11,9 +11,9 @@ namespace Cookbook {
 
         internal void Initialize() {
             _cookbookView.Greet();
-            _cookbookModel.CheckForExistingSavedRecipes();
+            // _cookbookModel.CheckForExistingSavedRecipes();
 
-            if (_cookbookModel.IsExistingSavedRecipe()) {
+            if (_cookbookModel.IsExistingSavedRecipe("recipes.txt")) {
                 _cookbookModel.LoadSavedRecipes();
                 _cookbookView.PrintSavedRecipes();
             } else _cookbookView.NewRecipeDisplay();
