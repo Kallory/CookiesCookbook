@@ -1,5 +1,7 @@
 ﻿
 
+using System.Net;
+
 namespace Cookbook {
     internal class CookbookView {
         internal void ExitTextDisplay() {
@@ -17,6 +19,10 @@ namespace Cookbook {
         internal void PrintSavedRecipes(Recipes recipes) {
             Console.WriteLine("Displaying saved recipes");
             foreach (var recipe in recipes.All) { Console.WriteLine(recipe); }
+        }
+
+        internal void CreateNewRecipeDisplay() {
+            Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
         }
     }
 }
