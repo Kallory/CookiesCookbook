@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cookies_Cookbook {
-    internal class Ingredient {
+namespace Cookies_Cookbook.Ingredients {
+    public interface IBakingMoisture {
     }
 }
