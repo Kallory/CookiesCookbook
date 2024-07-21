@@ -28,5 +28,9 @@ namespace Cookbook {
                 Console.WriteLine($"{ingredient.id}     {ingredient.Name}");
             }
         }
+
+        internal void DisplayAddIngredientByIdDialogue() {
+            Console.WriteLine("Add an ingredient by its ID or press e to exit");
+        }
     }
 }

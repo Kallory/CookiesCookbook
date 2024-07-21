@@ -25,6 +25,7 @@ namespace Cookbook {
             _cookbookModel.AddIngredient(ingredients, new AppleSauce(1, "apple sauce", "Add 1 cup applesauce and let sit"));
 
             _cookbookView.DisplayAvailableIngredientsForNewRecipe(ingredients);
+            _cookbookView.DisplayAddIngredientByIdDialogue();
             _cookbookView.ExitTextDisplay();
         }
     }
