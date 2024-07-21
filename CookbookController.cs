@@ -1,4 +1,6 @@
 ﻿
+using Cookies_Cookbook.Ingredients;
+
 namespace Cookbook {
     internal class CookbookController {
 
@@ -19,6 +21,10 @@ namespace Cookbook {
                 _cookbookView.NewRecipeDisplay();
             } else _cookbookView.NewRecipeDisplay();
 
+            List<Ingredient> ingredients = new List<Ingredient>();
+            _cookbookModel.AddIngredient(ingredients, new AppleSauce(1, "apple sauce", "Add 1 cup applesauce and let sit"));
+
+            _cookbookView.DisplayAvailableIngredientsForNewRecipe(ingredients);
             _cookbookView.ExitTextDisplay();
         }
     }

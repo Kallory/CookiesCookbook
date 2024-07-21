@@ -1,5 +1,6 @@
 ﻿
 
+using Cookies_Cookbook.Ingredients;
 using System.Net;
 
 namespace Cookbook {
@@ -21,8 +22,11 @@ namespace Cookbook {
             foreach (var recipe in recipes.All) { Console.WriteLine(recipe); }
         }
 
-        internal void CreateNewRecipeDisplay() {
-            Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
+        internal void DisplayAvailableIngredientsForNewRecipe(List<Ingredient> ingredients) {
+            Console.WriteLine("Displaying available ingredients: ");
+            foreach (var ingredient in ingredients) {
+                Console.WriteLine($"{ingredient.id}     {ingredient.Name}");
+            }
         }
     }
 }

@@ -8,14 +8,18 @@ namespace Cookies_Cookbook.Ingredients
 {
     public abstract class Ingredient
     {
-        private int _id {  get; set; }
-        private string _name { get; set; }
-        private string _instruction { get; set; }
+        public int id {  get; set; }
+        public string Name { get; set; }
+        public string Instruction { get; set; }
 
         public Ingredient(int id, string name, string instruction) {
-            _id = id;
-            _name = name;
-            _instruction = instruction;
+            this.id = id;
+            this.Name = name;
+            this.Instruction = instruction;
+        }
+
+        public override string ToString() {
+            return $"";
         }
     }
 }
