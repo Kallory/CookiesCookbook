@@ -15,7 +15,6 @@ namespace Cookbook {
 
         internal void Initialize() {
             _cookbookView.Greet();
-            // _cookbookModel.CheckForExistingSavedRecipes();
             string path = "recipes.txt";
             if (_cookbookModel.IsExistingSavedRecipe(path)) {
                 Recipes recipes = _cookbookModel.LoadSavedRecipes(path);
@@ -29,9 +28,6 @@ namespace Cookbook {
 
             _cookbookView.DisplayAvailableIngredientsForNewRecipe(ingredients);
             _cookbookView.DisplayAddIngredientByIdDialogue();
-
-            Console.WriteLine($"List ID = {listId}");
-            
 
 
             bool isNumber = int.TryParse(Console.ReadLine(), out int result);
@@ -48,7 +44,7 @@ namespace Cookbook {
             
 
             
-            Console.WriteLine($"Input was {input}");
+            Console.WriteLine($"Ingredient chosen = {ingredients[input].Name}");
 
             _cookbookView.ExitTextDisplay();
         }

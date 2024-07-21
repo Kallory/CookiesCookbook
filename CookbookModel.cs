@@ -38,7 +38,7 @@ namespace Cookbook {
         }
 
         internal bool IsNumberOnList(int result, int listNum) {
-            return result <= listNum;
+            return result <= listNum && result > 0;
         }
     }
 }
