@@ -36,5 +36,9 @@ namespace Cookbook {
         public void AddIngredient(List<Ingredient> ingredients, Ingredient ingredient) {
             ingredients.Add(ingredient);
         }
+
+        internal bool IsNumberOnList(int result, int listNum) {
+            return result <= listNum;
+        }
     }
 }

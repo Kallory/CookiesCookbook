@@ -32,5 +32,14 @@ namespace Cookbook {
         internal void DisplayAddIngredientByIdDialogue() {
             Console.WriteLine("Add an ingredient by its ID or press e to exit");
         }
+
+        internal void DisplayNotANumberMsg() {
+            Console.WriteLine("Please enter a valid number");
+        }
+
+
+        internal void DisplayIngredientNotAvailableMsg() {
+            Console.WriteLine("Invalid ingredient, please enter a number of the ingredient listed: ");
+        }
     }
 }
