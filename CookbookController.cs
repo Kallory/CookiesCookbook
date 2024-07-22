@@ -8,16 +8,19 @@ namespace Cookbook {
         private CookbookView _cookbookView;
         int input;
         int listId;
+        public Recipe recipe;
+
         public CookbookController() {
             this._cookbookModel = new CookbookModel();
             this._cookbookView = new CookbookView();
+            this.recipe = new Recipe();
         }
 
         internal void Initialize() {
             _cookbookView.Greet();
             string path = "recipes.txt";
             if (_cookbookModel.IsExistingSavedRecipe(path)) {
-                Recipes recipes = _cookbookModel.LoadSavedRecipes(path);
+                RecipesReader recipes = _cookbookModel.LoadSavedRecipes(path);
                 _cookbookView.PrintSavedRecipes(recipes);
                 _cookbookView.NewRecipeDisplay();
             } else _cookbookView.NewRecipeDisplay();
@@ -31,20 +34,30 @@ namespace Cookbook {
 
 
             bool isNumber = int.TryParse(Console.ReadLine(), out int result);
-
+            int counter = 0;
             CheckIsNumber(ref isNumber, ref result, _cookbookView);
 
 
-            while (!_cookbookModel.IsNumberOnList(result, listId)) {
-                _cookbookView.DisplayIngredientNotAvailableMsg();
-                isNumber = int.TryParse(Console.ReadLine(), out result);
-                CheckIsNumber(ref isNumber, ref result, _cookbookView);
+            bool IsExitKey = false;
+            while (!IsExitKey) {
+                if (result == 0) {
+                    IsExitKey = true;
+                    break;
+                }
+                while (!_cookbookModel.IsNumberOnList(result, listId)) {
+                    _cookbookView.DisplayIngredientNotAvailableMsg();
+                    isNumber = int.TryParse(Console.ReadLine(), out result);
+                    CheckIsNumber(ref isNumber, ref result, _cookbookView);
+                }
+
+                Console.WriteLine($"Ingredient chosen = {ingredients[input - 1].Name}");
+                recipe.ingredients.Add(ingredients[input - 1]);
+
+                Console.WriteLine($"Ingredient added to recipe: {recipe.ingredients[counter++].Name}");
+                _cookbookView.DisplayAddIngredientByIdDialogue();
+                isNumber = int.TryParse(Console.ReadLine(),out result);
+
             }
-
-            
-
-            
-            Console.WriteLine($"Ingredient chosen = {ingredients[input].Name}");
 
             _cookbookView.ExitTextDisplay();
         }

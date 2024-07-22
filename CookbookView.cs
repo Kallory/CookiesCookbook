@@ -17,7 +17,7 @@ namespace Cookbook {
             Console.WriteLine("ready for new recipes to be added");
         }
 
-        internal void PrintSavedRecipes(Recipes recipes) {
+        internal void PrintSavedRecipes(RecipesReader recipes) {
             Console.WriteLine("Displaying saved recipes");
             foreach (var recipe in recipes.All) { Console.WriteLine(recipe); }
         }
@@ -30,7 +30,7 @@ namespace Cookbook {
         }
 
         internal void DisplayAddIngredientByIdDialogue() {
-            Console.WriteLine("Add an ingredient by its ID or press e to exit");
+            Console.WriteLine("Add an ingredient by its ID or press 0 if you are done");
         }
 
         internal void DisplayNotANumberMsg() {

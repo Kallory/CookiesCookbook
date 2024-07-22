@@ -1,4 +1,4 @@
-﻿public class Recipes {
+﻿public class RecipesReader {
     public List<string> All { get; } = new List<string>();
     // private readonly NamesValidator _namesValidator = new NamesValidator();
 

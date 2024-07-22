@@ -5,12 +5,12 @@ using System.IO;
 namespace Cookbook {
     internal class CookbookModel {
         private StringsTextualRepository stringsTextualRepository;
-        private Recipes recipes;
+        private RecipesReader recipes;
         // private List<Ingredient> ingredients {  get; set; }
 
         public CookbookModel() {
             this.stringsTextualRepository = new StringsTextualRepository();
-            this.recipes = new Recipes();
+            this.recipes = new RecipesReader();
         }
 
         internal void CheckForExistingSavedRecipes() {
@@ -26,7 +26,7 @@ namespace Cookbook {
             return false;
         }
 
-        public Recipes LoadSavedRecipes(string path) {
+        public RecipesReader LoadSavedRecipes(string path) {
             Console.WriteLine("loading recipes");
             var stringsFromFile = stringsTextualRepository.Read(path);
             recipes.AddRecipes(stringsFromFile);
