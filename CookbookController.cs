@@ -26,9 +26,17 @@ namespace Cookbook {
             } else _cookbookView.NewRecipeDisplay();
 
             List<Ingredient> ingredients = new List<Ingredient>();
-            _cookbookModel.AddIngredient(ingredients, new AppleSauce(++listId, "apple sauce", "Add 1 cup applesauce and let sit"));
+            AppleSauce appleSauce = new AppleSauce(++listId, "apple sauce", "Add 1 cup applesauce and let sit");
+            appleSauce.TimeToLetSit(6);
+            _cookbookModel.AddIngredient(ingredients, appleSauce);
             _cookbookModel.AddIngredient(ingredients, new OliveOil(++listId, "Olive Oil", "Let heat on medium for one minute"));
 
+            if (ingredients[0] is AppleSauce) {
+                //(AppleSauce)ingredients[0].minutesToLetSit;
+                AppleSauce sauce = (AppleSauce)ingredients[0];
+                Console.WriteLine(appleSauce.minutesToLetSit);
+                Console.WriteLine(((AppleSauce)ingredients[0]).minutesToLetSit);
+            }
             _cookbookView.DisplayAvailableIngredientsForNewRecipe(ingredients);
             _cookbookView.DisplayAddIngredientByIdDialogue();
 
@@ -58,6 +66,8 @@ namespace Cookbook {
                 isNumber = int.TryParse(Console.ReadLine(),out result);
 
             }
+
+
 
             _cookbookView.ExitTextDisplay();
         }
