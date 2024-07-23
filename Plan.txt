@@ -10,3 +10,8 @@ The system shall offer the ability to save recipes in a txt format
 
 The system shall prompt the user to exit with any key
 
+
+
+
+TODO:
+Make more CRUD-like - right now it only Creates Recipes and overrides the file, so need ability to append to file, append/change individual recipe (update), and delete individual recipes. 

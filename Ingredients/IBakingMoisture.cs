@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Cookies_Cookbook.Ingredients {
     public interface IBakingMoisture { 
 
-        DateTime minutesToLetSit { get;}
+        int minutesToLetSit { get;}
 
         void TimeToLetSit(int minutes);
     }

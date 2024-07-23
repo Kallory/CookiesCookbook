@@ -9,16 +9,10 @@ namespace Cookies_Cookbook.Ingredients {
         public AppleSauce(int id, string name, string instruction) : base(id, name, instruction) {
         }
 
-        private DateTime _minutesToLetSit;
-
-        public DateTime minutesToLetSit {
-            get => _minutesToLetSit;
-            set => _minutesToLetSit = value;
-        }
+        public int minutesToLetSit {  get; set; }
 
         public void TimeToLetSit(int minutes) {
-            this.minutesToLetSit = this.minutesToLetSit.AddMinutes(minutes);
-            //return dateTime;
+            this.minutesToLetSit = minutes;
         }
     }
 }

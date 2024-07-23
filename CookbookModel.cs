@@ -42,11 +42,21 @@ namespace Cookbook {
         }
 
         internal void WriteToTxtFile(List<Ingredient> ingredients) {
-            // Convert List<Ingredient> to List<string>
-            List<string> ingredientNames = ingredients.Select(ingredient => ingredient.Name).ToList();
+            List<string> namesAndInstructions = new List<string>();
 
-            // Write the ingredient names to the file
-            stringsTextualRepository.Write("recipes.txt", ingredientNames);
+            for (int i = 0; i < ingredients.Count; i++) {
+                var ingredient = ingredients[i];
+                string line = $"{i + 1}) {ingredient.Name}: {ingredient.Instruction}";
+
+                // Check if the ingredient implements ISittable
+                if (ingredient is IBakingMoisture sittable) {
+                    line += $" - Time to let sit: {sittable.minutesToLetSit}";
+                }
+
+                namesAndInstructions.Add(line);
+            }
+
+            stringsTextualRepository.Write("recipes.txt", namesAndInstructions);
         }
     }
 }
