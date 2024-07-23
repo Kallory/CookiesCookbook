@@ -63,12 +63,12 @@ namespace Cookbook {
 
                 Console.WriteLine($"Ingredient added to recipe: {recipe.ingredients[counter++].Name}");
                 _cookbookView.DisplayAddIngredientByIdDialogue();
-                isNumber = int.TryParse(Console.ReadLine(),out result);
+                isNumber = int.TryParse(Console.ReadLine(), out result);
+                CheckIsNumber(ref isNumber, ref result, _cookbookView );
 
             }
 
-
-
+            _cookbookModel.WriteToTxtFile(recipe.ingredients);
             _cookbookView.ExitTextDisplay();
         }
 

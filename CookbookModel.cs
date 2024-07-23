@@ -40,5 +40,13 @@ namespace Cookbook {
         internal bool IsNumberOnList(int result, int listNum) {
             return result <= listNum && result > 0;
         }
+
+        internal void WriteToTxtFile(List<Ingredient> ingredients) {
+            // Convert List<Ingredient> to List<string>
+            List<string> ingredientNames = ingredients.Select(ingredient => ingredient.Name).ToList();
+
+            // Write the ingredient names to the file
+            stringsTextualRepository.Write("recipes.txt", ingredientNames);
+        }
     }
 }
