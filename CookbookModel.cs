@@ -1,6 +1,7 @@
 ﻿
 using Cookies_Cookbook.Ingredients;
 using System.IO;
+using System.Text.Json;
 
 namespace Cookbook {
     internal class CookbookModel {
@@ -56,7 +57,10 @@ namespace Cookbook {
                 namesAndInstructions.Add(line);
             }
 
+            string namesAndInstructionsJson = JsonSerializer.Serialize(namesAndInstructions);
+
             stringsTextualRepository.Write("recipes.txt", namesAndInstructions);
+            stringsTextualRepository.Write("recipes.json", namesAndInstructions);
         }
     }
 }
